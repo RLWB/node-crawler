@@ -1,0 +1,22 @@
+const { TwitterApi } = require("twitter-api-v2");
+const config = require("../../config.json").plateforms.twitter;
+console.log(config);
+const twitterClient = new TwitterApi(config);
+// Tell typescript it's a readonly app
+const readOnlyClient = twitterClient.readOnly;
+// Play with the built in methods
+
+exports.handleCommand = async (command, params) => {
+  switch (command) {
+    case "userInfo":
+      try {
+        const user = await readOnlyClient.v2.userByUsername("plhery");
+        return user;
+      } catch (error) {
+        console.log(error, 123);
+        throw error;
+      }
+    default:
+      throw new Error("NOT_SUPPORT_COMMAND");
+  }
+};

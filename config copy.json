@@ -1,0 +1,19 @@
+{
+    "webConfig": {
+        "logEnv": "dev"
+    },
+    "plateforms": {
+        "weibo": {
+            "headers": {
+                "Cookie": "SUB=_2AkMR1xIwf8NxqwFRmfwQyGnrZYRxzwzEieKni-PrJRMxHRl-yT9kqkdetRB6Olc8331SWqn9OIskj4DyIRjvhg-sewAx; SUBP=0033WrSXqPxfM72-Ws9jqgMF55529P9D9WW4PZZVe0A18NW767g9qVso; _s_tentry=-; Apache=5115807049738.681.1721132827710; SINAGLOBAL=5115807049738.681.1721132827710; ULV=1721132827714:1:1:1:5115807049738.681.1721132827710:; WBtopGlobal_register_version=2024071620",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36"
+            }
+        },
+        "twitter": {
+            "appKey": "TkxbtQndsrRUHPLGnouaxHe2V",
+            "appSecret": "BuILrV4q6Lm0dhMlU4tZA4SxCpntZB7qVHO8sRCHShpd3xhJoM",
+            "accessToken": "3948281969-AGS26WWLcx9FB7S5xDVU4X5h2KCCbxjXsVe12as",
+            "accessSecret": "FasklnKeueEBITLMtSLoazODtxfC5D7rQumxqQg8ZCyf1"
+        }
+    }
+}

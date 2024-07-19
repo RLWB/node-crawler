@@ -1,0 +1,5 @@
+error: Jul-17-2024 11:38:50: 	400 - Bad Request - 平台不支持 - /api/command - POST - ::ffff:127.0.0.1
+error: Jul-17-2024 11:40:17: 	400 - Bad Request - 平台不支持 - /api/command - POST - ::ffff:127.0.0.1
+error: Jul-17-2024 11:40:36: 	400 - Bad Request - 命令不支持 - /api/command - POST - ::ffff:127.0.0.1
+error: Jul-17-2024 11:42:15: 	400 - [object Object] - 命令不支持 - /api/command - POST - ::ffff:127.0.0.1
+error: Jul-17-2024 11:42:37: 	400 - {"platform":"weibo","command":"userInfo2","params":{"keyword":"陳奕迅所長"}} - 命令不支持 - /api/command - POST - ::ffff:127.0.0.1

@@ -1,0 +1,7 @@
+//nodejs project ignore file
+node_modules/
+.DS_Store
+.env
+.env.*
+.npmrc
+config.json
