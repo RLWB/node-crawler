@@ -22,8 +22,6 @@ module.exports = (err, req, res, next) => {
       code = 400;
       message = "关键字不能为空";
       break;
-    case "INVAID_JSON":
-      return;
     default:
       code = 500;
       message = err.message;

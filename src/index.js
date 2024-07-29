@@ -5,7 +5,6 @@ const commandRoutes = require("./routes/command");
 require("dotenv").config();
 
 const app = express();
-const port = 3000;
 
 app.use(
   bodyParser.json({
@@ -14,7 +13,6 @@ app.use(
         JSON.parse(buf.toString(encoding));
       } catch (e) {
         res.status(400).send({ error: "Invalid JSON format" });
-        throw new Error("INVAID_JSON");
       }
     },
   })
