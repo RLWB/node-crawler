@@ -4,7 +4,7 @@ const cheerio = require("cheerio");
 const { headers } = require("../../config.json").plateforms.weibo;
 exports.handleCommand = async (command, params) => {
   switch (command) {
-    case "userInfo":
+    case "getUserInfo":
       return await searchUser(params?.keyword);
     case "search":
       return await searchWeibo(params?.keyword);
@@ -32,7 +32,7 @@ const searchWeibo = async (keyword) => {
   const response = await axios.get(url, {
     headers,
   });
-  // 需要解析返回的 HTML，提取微博内容 
+  // 需要解析返回的 HTML，提取微博内容
   return parseWeiboResponse(response.data);
 };
 //获取用户信息

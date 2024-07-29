@@ -8,7 +8,7 @@ const readOnlyClient = twitterClient.readOnly;
 
 exports.handleCommand = async (command, params) => {
   switch (command) {
-    case "userInfo":
+    case "getUserInfo":
       try {
         const user = await readOnlyClient.v2.userByUsername("plhery");
         return user;

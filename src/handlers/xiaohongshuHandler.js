@@ -29,7 +29,7 @@ async function getUserInfo(keyword) {
 
 exports.handleCommand = async (command, params) => {
   switch (command) {
-    case "userInfo":
+    case "getUserInfo":
       try {
         const user = await getUserInfo(params?.keyword);
         return user;

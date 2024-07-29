@@ -1,20 +1,22 @@
 // src/handlers/wechatHandler.js
-const axios = require('axios');
+const axios = require("axios");
 
 exports.handleCommand = async (command, params) => {
   switch (command) {
-    case 'search':
+    case "search":
       return await search(params.keyword);
-    case 'userInfo':
+    case "getUserInfo":
       return await getUserInfo(params.userId);
     default:
-      throw new Error('Unsupported command');
+      throw new Error("Unsupported command");
   }
 };
 
 const search = async (keyword) => {
   // 实现搜索功能
-  const response = await axios.get(`https://api.wechat.com/search?keyword=${keyword}`);
+  const response = await axios.get(
+    `https://api.wechat.com/search?keyword=${keyword}`
+  );
   return response.data;
 };
 
