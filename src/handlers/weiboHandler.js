@@ -32,7 +32,7 @@ const searchWeibo = async (keyword) => {
   const response = await axios.get(url, {
     headers,
   });
-  // 需要解析返回的 HTML，提取微博内容
+  // 需要解析返回的 HTML，提取微博内容 
   return parseWeiboResponse(response.data);
 };
 //获取用户信息
@@ -103,7 +103,6 @@ const parseWeiboResponse = (html) => {
       content: $(elem).find(".name").text(),
       // 添加更多微博内容的提取逻辑
     };
-
     weibos.push(weibo);
   });
 

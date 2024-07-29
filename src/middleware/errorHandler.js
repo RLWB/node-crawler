@@ -15,7 +15,7 @@ module.exports = (err, req, res, next) => {
       message = "未授权";
       break;
     case "USER_DOES_NOT_EXIST":
-      code = 400;
+      code = 404;
       message = "用户不存在";
       break;
     case "KEYWORD_IS_REQURED":
