@@ -1,0 +1,29 @@
+{
+  "name": "huanqiu-summary-fetch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "PORT=80 node bin/www",
+    "dev": "nodemon bin/www"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "cheerio": "^1.0.0-rc.12",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsdom": "^24.1.1",
+    "morgan": "^1.10.0",
+    "oauth-1.0a": "^2.2.6",
+    "puppeteer": "^22.13.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "twitter-api-v2": "^1.17.2",
+    "winston": "^3.13.1"
+  }
+}
