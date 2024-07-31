@@ -1,5 +1,5 @@
 const { TwitterApi } = require("twitter-api-v2");
-const config = require("../../config.json").plateforms.twitter;
+const config = require("../../../config.json").plateforms.twitter;
 console.log(config);
 const twitterClient = new TwitterApi(config);
 const readOnlyClient = twitterClient.readOnly;

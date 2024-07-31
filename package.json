@@ -19,11 +19,14 @@
     "express": "^4.19.2",
     "jsdom": "^24.1.1",
     "morgan": "^1.10.0",
+    "mysql2": "^3.11.0",
+    "node-schedule": "^2.1.1",
     "oauth-1.0a": "^2.2.6",
     "puppeteer": "^22.13.1",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "twitter-api-v2": "^1.17.2",
+    "uuid": "^10.0.0",
     "winston": "^3.13.1"
   }
 }

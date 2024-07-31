@@ -1,10 +1,10 @@
 // src/utils/platformSelector.js
-const wechatHandler = require('../handlers/wechatHandler');
-const weiboHandler = require('../handlers/weiboHandler');
-const twitterHandler = require('../handlers/twitterHandler');
-const douyinHandler = require('../handlers/douyinHandler');
-const xiaohongshuHandler = require('../handlers/xiaohongshuHandler');
-const videoHandler = require('../handlers/videoHandler');
+const wechatHandler = require('../v1/handlers/wechatHandler');
+const weiboHandler = require('../v1/handlers/weiboHandler');
+const twitterHandler = require('../v1/handlers/twitterHandler');
+const douyinHandler = require('../v1/handlers/douyinHandler');
+const xiaohongshuHandler = require('../v1/handlers/xiaohongshuHandler');
+const videoHandler = require('../v1/handlers/videoHandler');
 
 module.exports = (platform) => {
   switch (platform) {

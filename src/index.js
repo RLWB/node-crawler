@@ -1,7 +1,8 @@
 // src/index.js
 const express = require("express");
 const bodyParser = require("body-parser");
-const commandRoutes = require("./routes/command");
+const commandRoutes = require("./v1/routes/command");
+const {initDatabase} = require('./config/db')
 require("dotenv").config();
 
 const app = express();
@@ -17,6 +18,8 @@ app.use(
     },
   })
 );
-app.use("/api", commandRoutes);
+
+initDatabase()
+app.use("/api/v1", commandRoutes);
 
 module.exports = app;

@@ -3,11 +3,9 @@ const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 puppeteer.use(StealthPlugin());
 
 async function getUserInfo(username) {
-  if (!username) {
-    throw new Error("KEYWORD_IS_REQURED");
-  }
   const browser = await puppeteer.launch({
     headless: true,
+    userDataDir:"../../../userData",
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
@@ -27,14 +25,24 @@ async function getUserInfo(username) {
         ) {
           const body = await response.json();
           if(body.status_code === 0 && Array.isArray(body.data) && body.data.length > 0){
-            resolve({
-                name: body.data[0]?.user_list[0]?.user_info?.nickname,
-                avatar: body.data[0]?.user_list[0]?.user_info?.avatar_thumb?.url_list[0],
-                followers_count: body.data[0]?.user_list[0]?.user_info?.follower_count,
-                friends_count: body.data[0]?.user_list[0]?.user_info?.following_count,
-                url: `https://www.douyin.com/user/${body.data[0]?.user_list[0]?.user_info?.sec_uid}`,
-            })
-          }else {
+            const userData = body.data[0];
+            if(userData && userData.user_list && userData.user_list.length > 0){
+              const userInfo = userData.user_list[0].user_info;
+              if(userInfo){
+                resolve({
+                    name: userInfo.nickname,
+                    avatar: userInfo.avatar_thumb?.url_list[0],
+                    followers_count: userInfo.follower_count,
+                    friends_count: userInfo.following_count,
+                    url: `https://www.douyin.com/user/${userInfo.sec_uid}`,
+                });
+              } else {
+                throw new Error("USER_DOES_NOT_EXIST");
+              }
+            } else {
+              throw new Error("USER_DOES_NOT_EXIST");
+            }
+          } else {
             throw new Error("USER_DOES_NOT_EXIST");
           }
         }

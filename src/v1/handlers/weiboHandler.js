@@ -1,7 +1,7 @@
 // src/handlers/weiboHandler.js
 const axios = require("axios");
 const cheerio = require("cheerio");
-const { headers } = require("../../config.json").plateforms.weibo;
+const { headers } = require("../../../config.json").plateforms.weibo;
 exports.handleCommand = async (command, params) => {
   switch (command) {
     case "getUserInfo":
